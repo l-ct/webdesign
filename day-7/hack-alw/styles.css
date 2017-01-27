@@ -1,0 +1,14 @@
+/* Overwrite any CSS here! */
+html, body {
+	background-color: grey;
+}
+
+#home {
+	color: green !important;
+}
+
+.background {
+	position: fixed;
+	height: 50%;
+	width: 50%;
+}

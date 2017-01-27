@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Cantarell';
+    src: url('fonts/cantarell-regular-webfont.woff2') format('woff2'),
+         url('fonts/cantarell-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+	padding: 0;
+	margin: 0;
+}
+html {
+	margin: 40px;
+}
+p {
+	position: fixed;
+	font-family: 'Cantarell', verdana;
+	font-size: 50px;
+	margin-right: 10px; 
+	margin-bottom: 10px;
+}

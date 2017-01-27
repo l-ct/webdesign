@@ -1,0 +1,29 @@
+html, body {
+	background-color: #ddd;
+	color: #333;
+	text-align: center;
+}
+a {
+	padding: 5px;
+	border: 1px solid #333; /*shorthand for borders*/
+	color: #333;
+	text-decoration: none; /*removes underline*/
+}
+a:visited { /*a:pseudoselector*/
+	color: #333;
+}
+h2, div, p, a {
+	margin-top: 100px;
+}
+h2 {
+	font-weight: normal; /*prevents bold*/
+}
+.my-span-class {
+	font-style: italic;
+}
+.div-with-image img {
+	width: 30%;
+}
+#my-id {
+	font-weight: bold; /*bring bold back*/
+}

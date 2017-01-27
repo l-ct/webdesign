@@ -1,0 +1,26 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+html {
+	margin: 40px 0 0 40px;
+}
+input, button, .result {
+	font-family: verdana, sans-serif;
+	font-size: 50px;
+}
+input, button {
+	display: block;
+	padding: 20px;
+	border: 1px solid black;
+}
+button, .result {
+	margin-top: 20px;
+}
+button {
+	color: white;
+	background-color: black;
+}
+button:hover{
+	cursor: pointer;
+}

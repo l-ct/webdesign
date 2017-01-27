@@ -1,0 +1,18 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	background-color: #fff;
+}
+#draw-animation {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+main {
+	/* so main element is in the foreground */
+	z-index: 5;
+}
+

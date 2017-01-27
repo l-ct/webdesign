@@ -1,0 +1,61 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 30px;
+	font-family: verdana;
+}
+@media screen and (min-width: 800px) {
+	html {
+		font-size: 40px;
+	}
+}
+@media screen and (min-width: 1000px) {
+	html {
+		font-size: 60px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	html {
+		font-size: 80px;
+	}
+}
+@media screen and (min-width: 1800px) {
+	html {
+		font-size: 100px;
+	}
+}
+body {
+	background-color: #ddd;
+}
+main {
+	position: absolute;
+	top:0;
+	left:0;
+
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#draw-animation {
+	position: fixed;
+	top:0;
+	left:0;
+	z-index: 0;
+	width: 100%;
+}
+main {
+	z-index: 5;
+}
+main p {
+	text-align: center; 
+	width: 80%;
+	font-size: 1rem;
+}
+main p span {
+	display: inline-block;
+}
