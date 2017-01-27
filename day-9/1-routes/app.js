@@ -19,11 +19,5 @@ app.get('/:word', function(req, res) {
 	res.render('index', {message: req.params.word});
 });
 
-// a new API route
-app.get('/api', function(req, res) {
-	// send json object
-	res.json({greeting: 'ohhhhh yea'});
-});
-
 app.listen(3000);
 console.log('listening on port 3000');
