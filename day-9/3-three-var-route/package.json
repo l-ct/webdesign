@@ -1,0 +1,8 @@
+{
+  "name": "three-var-routes",
+  "version": "1.0.0",
+  "dependencies": {
+    "ejs": "^2.5.5",
+    "express": "4.x"
+  }
+}

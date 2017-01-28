@@ -1,5 +1,5 @@
 {
-  "name": "ejs-templates",
+  "name": "two-var-routes",
   "version": "1.0.0",
   "dependencies": {
     "ejs": "^2.5.5",

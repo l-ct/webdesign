@@ -10,19 +10,18 @@ app.use(express.static(__dirname + '/public'));
 // set the home page route
 app.get('/', function(req, res) {
 	// ejs render automatically looks in the views folder
-	res.render('index', {message: 'URL to Word'});
+	res.render('index', {
+		first: 'first',
+		second: 'second'
+	});
 });
 
-// :word will be accessible by req.params.word
-app.get('/:word', function(req, res) {
-	console.log(req.params.word);
-	res.render('index', {message: req.params.word});
-});
-
-// a new API route
-app.get('/api', function(req, res) {
-	// send json object
-	res.json({greeting: 'ohhhhh yea'});
+// both :variables are accessible through req.params
+app.get('/:first/:second', function(req, res) {
+	res.render('index', {
+		first: req.params.first,
+		second: req.params.second
+	});
 });
 
 app.listen(3000);
