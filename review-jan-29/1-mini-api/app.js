@@ -19,5 +19,14 @@ app.get('/api', function(req, res) {
 	res.json({greeting: 'ohhhhh yea'});
 });
 
+app.get('/:word', function(req, res) {
+	res.render('index', {message: req.params.word });
+});
+
+app.get('*', function(req, res) {
+	res.render('index', {message: 'All others'});
+});
+
+
 app.listen(3000);
 console.log('listening on port 3000');

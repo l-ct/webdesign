@@ -22,7 +22,7 @@ app.get('/api/:city', function(req, res) {
 		// console.log(body);
 		var theData = JSON.parse(body);
 		console.log(theData);
-		res.json(theData);
+		res.json(theData.weather[0].description);
 	});
 });
 
