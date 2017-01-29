@@ -1,0 +1,32 @@
+<% 
+var ranCol1 = "rgb(" + Math.floor((Math.random() * 255) + 50) + "," + Math.floor((Math.random() * 255) + 50) + ",255)",
+	ranCol2 = "rgb(" + Math.floor((Math.random() * 255) + 200) + "," + Math.floor((Math.random() * 255) + 200) + ",255)",
+	ranDir = Math.floor((Math.random() * 360) + 0) + "deg";
+for (var i = 0; i < size; i++) { // size is gotten from the route
+	if (Math.random() < 0.35){  // A colorful window appears with 65% probability
+	%>
+		<div class="small hide"></div>
+	<% } else {
+		if (Math.random() < 0.25) { // A colorful window appears with 65% probability
+			var ranCol1 = "rgb(" + Math.floor((Math.random() * 255) + 100) + "," + Math.floor((Math.random() * 255) + 100) + ",255)", // I need to figure out the optimal color scheme
+			    ranCol2 = "rgb(" + Math.floor((Math.random() * 255) + 100) + "," + Math.floor((Math.random() * 255) + 100) + ",255)",
+				ranDir = Math.floor((Math.random() * 360) + 0) + "deg";
+		} %>
+		<div class="small" style="
+		background: -webkit-linear-gradient(<%= ranDir %>, <%= ranCol1 %>, <%= ranCol2 %>);
+		background:      -o-linear-gradient(<%= ranDir %>, <%= ranCol1 %>, <%= ranCol2 %>);
+		background:    -moz-linear-gradient(<%= ranDir %>, <%= ranCol1 %>, <%= ranCol2 %>);
+		background:         linear-gradient(<%= ranDir %>, <%= ranCol1 %>, <%= ranCol2 %>);
+		">
+			<% if (Math.random() < 0.45) { %>
+				<div class="smaller" style="
+					height: <%= Math.floor((Math.random() * 30) + 10); %>px;
+					width:  <%= Math.floor((Math.random() * 30) + 10); %>px;
+					top:  <%= Math.floor((Math.random() * 20) + 1); %>px;
+					left: <%= Math.floor((Math.random() * 20) + 1); %>px;
+				"></div>
+			<% } %>
+		</div>
+	<% }
+};
+%>
