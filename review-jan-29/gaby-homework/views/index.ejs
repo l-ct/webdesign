@@ -6,8 +6,13 @@
 <body>
 	<main>
 		<p><%= message %></p>
+
+		<% for (var i=0; i<message; i++){ %>
+			<img style="width: <%= message*10 %>px;" src="/house.jpg">
+		<% } %>
+
 	</main>
-	<img src="/house.jpg"></img>
+	
 	<script
 		src="https://code.jquery.com/jquery-3.1.1.min.js"
 		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="

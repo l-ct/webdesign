@@ -27,5 +27,5 @@ app.get('/api', function(req, res) {
 	res.json(whatThisClassIs);
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 console.log('listening on port 3000');
