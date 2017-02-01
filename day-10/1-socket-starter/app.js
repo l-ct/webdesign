@@ -7,7 +7,7 @@ var io = require('socket.io').listen(server);
 app.use(express.static(__dirname + '/public'));
 
 // this sets up the socket.io server
-server.listen(3000);
+server.listen(process.env.PORT || 3000);
 console.log("server listening on port 3000...");
 
 app.get('/', function(req, res) {

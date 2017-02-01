@@ -1,5 +1,8 @@
 var socket = io.connect('/');
 
+// If the drawing has been going on for a while
+// this takes all of the accumulated divs from other 
+// users and appends them all as soon as page is loaded.
 socket.on('init', function (data) {
 	console.log(data);
 	for (var i=0; i<data.length; i++){
@@ -7,28 +10,22 @@ socket.on('init', function (data) {
 	}
 });
 
+// every time another user sends information to the server
+// the server will broadcast that info on the 'other clicks'
+// channel
 socket.on('other clicks', function (data) {
 	console.log(data);
 	$('#art-board').append(data);
 });
 
 $(document).click(function(e){
-	var windowHeight = window.innerHeight;
-	var windowWidth = window.innerWidth;
 
-	console.log(e);
-	console.log(e.clientX);
-	console.log(e.clientY);
-	console.log(windowHeight);
-	console.log(windowWidth);
+	// grab the location of cursor when clicked and divide
+	// x and y coordinated by width and height of window
+	var heightRatio = e.clientY / window.innerHeight;
+	var widthRatio = e.clientX / window.innerWidth;
 
-	heightRatio = e.clientY / windowHeight;
-	widthRatio = e.clientX / windowWidth;
-
-	console.log(heightRatio);
-	console.log(widthRatio);
-
-	// http://stackoverflow.com/questions/1726630/formatting-a-number-with-exactly-two-decimals-in-javascript
+	// turn the decimal into a whole percent
 	heightRatio = Math.floor(heightRatio*100);
 	widthRatio = Math.floor(widthRatio*100);
 
@@ -40,8 +37,8 @@ $(document).click(function(e){
 		+ 'left:' + widthRatio + '%;'
 		+ '"></div>';
 
+	// append html to page
 	$('#art-board').append(element);
-
-	socket.emit('another click', { anotherDot: element });
-
+	// send html to server
+	socket.emit('another click', element);
 });
