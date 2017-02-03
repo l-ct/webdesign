@@ -1,0 +1,63 @@
+/* reset s*/
+* {
+	padding: 0;
+	margin: 0;
+}
+li { list-style: none; }
+:focus { outline: 0; }
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* both pages */
+html {
+	font-family: verdana;
+	font-size: 40px;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-flow: center;
+	height: 100%;
+	width: 100%;
+}
+
+/* artists page */
+input {
+	font-family: inherit;
+	font-size: inherit;
+	display: block;
+	border: none;
+}
+input[type='text'] {
+	background: none;
+	border-bottom: solid 2px #000;
+	margin-bottom: 1rem;
+	padding-bottom: .5rem;
+}
+input[type='submit'] {
+	color: #fff;
+	background-color: #0f0;
+	padding: .3rem;
+}
+input[type='submit']:hover {
+	background-color: #6f6;
+	cursor: pointer;
+}
+
+/* artists page */
+.index ul {
+	margin-bottom: 1rem;
+}
+li {
+	font-size: 1rem;
+	margin-bottom: .5rem;
+}
+.index p a {
+	background-color: #0f0;
+	color: #fff;
+	padding: .3rem;
+}

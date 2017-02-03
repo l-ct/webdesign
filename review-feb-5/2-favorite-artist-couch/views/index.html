@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>A List of Artists</title>
+	<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+	<main class="index">
+
+		<ul class="artists"></ul>
+		<p><a href="/add">Add Another</a></p>
+	</main>
+	<script
+		src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		crossorigin="anonymous"></script>
+	<script src="/scripts.js"></script>
+	<script>
+		$(document).ready(function(){
+			console.log('$ ready');
+			getArtists();
+		});
+	</script>
+</body>
+</html>
