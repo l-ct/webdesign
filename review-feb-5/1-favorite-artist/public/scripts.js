@@ -14,10 +14,10 @@ function getArtists(){
 	$.getJSON('/api/artists', function(data){
 		console.log(data);
 		for (var i=0; i<data.length; i++){
-			var str = '<li><a href="'
-							+ data[i].link + '">' + data[i].name
-							+ "</a></li>";
-			$('.artists').append(str)
+			var str = '<li><a href="';
+			str += data[i].link + '">' + data[i].name;
+			str += "</a></li>";
+			$('.artists').append(str);
 		}
 	});
 }

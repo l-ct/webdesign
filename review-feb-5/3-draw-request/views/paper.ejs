@@ -18,7 +18,7 @@ function onMouseUp(event) {
 	path.simplify();
 }
 
-$('#download').click(function() {
+$('#save').click(function() {
 	var svg = project.exportSVG({ asString: true });
 	console.log(svg);
 	$.post('/save', {drawing: svg});

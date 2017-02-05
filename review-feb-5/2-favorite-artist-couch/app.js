@@ -10,8 +10,6 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-var favoriteArtists = [];
-
 // cloudant credentials
 // var cloudant_USER = 'YOUR-USER-NAME';
 // var cloudant_DB = 'YOUR-DB-NAME';
@@ -55,7 +53,6 @@ app.post('/api/add', function(req, res) {
 				res.json({error: res.statusCode});
 			}
 		});
-		favoriteArtists.push(req.body);
 	}
 });
 
@@ -72,8 +69,6 @@ app.get('/api/artists', function(req, res) {
 		console.log(body);
 		res.json(body.rows);
 	});
-
-//	res.json(favoriteArtists);
 });
 
 app.listen(process.env.PORT || 3000);

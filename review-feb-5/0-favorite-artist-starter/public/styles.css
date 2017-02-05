@@ -1,0 +1,20 @@
+/* resets*/
+* {
+	padding: 0;
+	margin: 0;
+}
+li {
+	list-style: none;
+}
+
+/* this is considered bad for usability
+   :focus can't be left to 0 
+   needs to be changed to something else */
+:focus {
+	outline: 0;
+}
+
+html {
+	font-family: verdana;
+	font-size: 40px;
+}
